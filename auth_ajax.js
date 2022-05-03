@@ -39,10 +39,12 @@ function post_auth(url, json_data) {
                 console.log(response['user']['id']);
                 setCookie("user_id", response['user']['id'], 1)
                 setCookie("user_email", response['user']['email'], 1)
-                if(getCookie('user_id')) {
-                    window.location.href = "root.html";
-                }else{
+                if(getCookie('user_id') === null) {
+
                     window.location.href = "index.html";
+                }else{
+                    window.location.href = "root.html";
+
                 }
             }
         }
