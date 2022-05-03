@@ -40,9 +40,9 @@ function post_auth(url, json_data) {
                 setCookie("user_id", response['user']['id'], 1)
                 setCookie("user_email", response['user']['email'], 1)
                 if(getCookie('user_id').toString()) {
-                    window.location.href = "http://localhost:63342/planner_api/pages/html/index.html?_ijt=bip9fc3fqi8mi7habl14phb6c6&_ij_reload=RELOAD_ON_SAVE";
+                    window.location.href = "index.html";
                 }else{
-                    window.location.href = "http://localhost:63342/planner_api/pages/html/auth.html?_ijt=4p97735jdrvbrc5n6t7hkjd6li&_ij_reload=RELOAD_ON_SAVE";
+                    window.location.href = "auth.html";
                 }
             }
         }
