@@ -1,3 +1,14 @@
+function add_script(src) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.async=true;
+    document.body.appendChild(script);
+}
+
+add_script('category.js');
+add_script('task.js');
+
+
 set_name_in_header();
 function error_alert(error){
     alert(" Can't do because: " + error.toString());
