@@ -10,7 +10,8 @@ function add_task(){
         "time_start": document.getElementById('time_start').value.toString(),
         "time_finish": document.getElementById('time_finish').value.toString(),
     }
-    post(task_url, json_task)
+    post(task_url, json_task);
+    get_all_tasks();
 }
 
 function get_all_tasks(){

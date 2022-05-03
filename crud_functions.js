@@ -23,7 +23,7 @@ function delete_instance(url) {
             error_alert(error)
         },
         success: function () {
-            alert(" Done ! ");
+            alert("Done!");
         }
     });
 }

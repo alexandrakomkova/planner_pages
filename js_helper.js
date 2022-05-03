@@ -9,14 +9,14 @@ add_script('category.js');
 add_script('task.js');
 
 
-set_name_in_header();
+
 function error_alert(error){
     alert(" Can't do because: " + error.toString());
 }
 
-function set_name_in_header(){
-    document.getElementById("hello_account").innerText+=getCookie("user_email").toString();
-}
+// function set_name_in_header(){
+//     document.getElementById("hello_account").innerText+=getCookie("user_email").toString();
+// }
 
 function check_data_type(data, result_block) {
 

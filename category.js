@@ -44,3 +44,7 @@ function delete_cat() {
 //     put(form_instance_url(cat_url, genre_id),json_genre);
 // }
 
+function set_name_in_header(){
+    document.getElementById("hello_account").innerText+=getCookie("user_email").toString();
+}
+set_name_in_header();
