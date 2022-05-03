@@ -104,8 +104,8 @@ function logout(){
         },
         success: function (response) {
             if(response.status === 200 && response['logged_out']){
-                setCookie("user_id", getCookie('user_id').toString(), -1)
-                setCookie("user_email",  getCookie('user_email').toString(), -1)
+                // setCookie("user_id", getCookie('user_id').toString(), -1)
+                // setCookie("user_email",  getCookie('user_email').toString(), -1)
                 window.location.href = "index.html";
             }
         }

@@ -14,14 +14,14 @@ function add_task(){
 }
 
 function get_all_tasks(){
-    get(task_url+"_user/"+getCookie("user_id").toString(), 'result_task')
+    get(task_url+"_user/"+getCookie('user_id').toString(), 'result_task')
 }
 
 function add_values_to_select(select_id){
     $.ajax({
         type: 'get',
         cache: false,
-        url: cat_url,
+        url: cat_url+"_user/"+getCookie("user_id").toString(),
         dataType: 'json',
         error: function (request, error) {
             error_alert(error)

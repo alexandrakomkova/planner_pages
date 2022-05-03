@@ -10,7 +10,7 @@ function add_cat(){
 }
 
 function get_all_cats(){
-    get(cat_url+"_user/"+getCookie("user_id").toString(), 'result_cat')
+    get(cat_url+"_user/"+getCookie('user_id').toString(), 'result_cat')
 }
 
 function get_cat(id){
