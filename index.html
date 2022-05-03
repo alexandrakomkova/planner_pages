@@ -9,56 +9,28 @@
             crossorigin="anonymous"></script>
     <script type="text/javascript" src = 'js_helper.js' async></script>
     <script type="text/javascript" src = 'crud_functions.js' async></script>
-    <script type="text/javascript" src = 'category.js' async></script>
-    <script type="text/javascript" src = 'task.js' async></script>
+    <script type="text/javascript" src = 'auth_ajax.js' async></script>
+    <link rel="stylesheet" href="auth_form.css">
 </head>
 <body>
-<header>
-    <p id="hello_account"> </p> | <button type="submit" onclick='logout();'>Logout</button>
 
-</header>
-<h1>Categories</h1>
-<div id="category">
-<!--    book id   <input id="cat_id" type="number" min="1"/><br>-->
-    title <input id="cat_title" type="text" maxlength="100"/><br>
-    <p>
-        <button id="add_cat" onclick="add_cat();">new</button>
-<!--        <button id="delete_cat" onclick="delete_cat();">delete</button>-->
-<!--        <button id="update_cat" onclick="update_cat();">update</button>-->
-<!--        <button id="get_all_cats" onclick="get_all_cats();">view all</button>-->
-    </p><br>
-    <table id="result_cat" >
-        <thead>
-        <tr>
-            <th>title</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
 
-<h1>Tasks</h1>
-<div id="task">
-    <!--    book id   <input id="cat_id" type="number" min="1"/><br>-->
-    category <select id="task_cat" type="text" maxlength="100" required></select><br>
-    time start <input type="time" id="time_start" min="00:00" max="23:59" required><br>
-    time finish <input type="time" id="time_finish" min="00:00" max="23:59" required><br>
-    <p>
-        <button id="add_task" onclick="add_task();">new</button>
-        <!--        <button id="delete_cat" onclick="delete_cat();">delete</button>-->
-        <!--        <button id="update_cat" onclick="update_cat();">update</button>-->
-<!--        <button id="get_all_tasks" onclick="get_all_tasks();">view all</button>-->
-    </p><br>
-    <table id="result_task" >
-        <thead>
-        <tr>
-            <th>category</th>
-            <th>time_start</th>
-            <th>time_finish</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
+    <div class="container">
+        <h1>Auth</h1>
+        <p>Please fill in this form to create an account or login.</p>
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+
+        <hr>
+        <button class="registerbtn" onclick="registration();">Register</button>
+        <button class="registerbtn" onclick="login();">Login</button>
+    </div>
+
 </body>
+
 </html>

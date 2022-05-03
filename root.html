@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>planner - auth</title>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src = 'js_helper.js' async></script>
+    <script type="text/javascript" src = 'crud_functions.js' async></script>
+    <script type="text/javascript" src = 'category.js' async></script>
+    <script type="text/javascript" src = 'task.js' async></script>
+</head>
+<body>
+<header>
+    <p id="hello_account"> </p> | <button type="submit" onclick='logout();'>Logout</button>
+
+</header>
+<h1>Categories</h1>
+<div id="category">
+<!--    book id   <input id="cat_id" type="number" min="1"/><br>-->
+    title <input id="cat_title" type="text" maxlength="100"/><br>
+    <p>
+        <button id="add_cat" onclick="add_cat();">new</button>
+<!--        <button id="delete_cat" onclick="delete_cat();">delete</button>-->
+<!--        <button id="update_cat" onclick="update_cat();">update</button>-->
+<!--        <button id="get_all_cats" onclick="get_all_cats();">view all</button>-->
+    </p><br>
+    <table id="result_cat" >
+        <thead>
+        <tr>
+            <th>title</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<h1>Tasks</h1>
+<div id="task">
+    <!--    book id   <input id="cat_id" type="number" min="1"/><br>-->
+    category <select id="task_cat" type="text" maxlength="100" required></select><br>
+    time start <input type="time" id="time_start" min="00:00" max="23:59" required><br>
+    time finish <input type="time" id="time_finish" min="00:00" max="23:59" required><br>
+    <p>
+        <button id="add_task" onclick="add_task();">new</button>
+        <!--        <button id="delete_cat" onclick="delete_cat();">delete</button>-->
+        <!--        <button id="update_cat" onclick="update_cat();">update</button>-->
+<!--        <button id="get_all_tasks" onclick="get_all_tasks();">view all</button>-->
+    </p><br>
+    <table id="result_task" >
+        <thead>
+        <tr>
+            <th>category</th>
+            <th>time_start</th>
+            <th>time_finish</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+</body>
+</html>
