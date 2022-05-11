@@ -1,4 +1,4 @@
-clean_cookie();
+//clean_cookie();
 function add_script(src) {
     var script = document.createElement('script');
     script.src = src;
@@ -123,10 +123,10 @@ function logout(){
     });
 }
 
-function clean_cookie() {
-    setCookie('user_id', getCookie('user_id').toString(), -1)
-    setCookie('user_email',  getCookie('user_email').toString(), -1)
-}
+// function clean_cookie() {
+//     setCookie('user_id', getCookie('user_id').toString(), -1)
+//     setCookie('user_email',  getCookie('user_email').toString(), -1)
+// }
 
 add_script('category.js');
 add_script('task.js');
