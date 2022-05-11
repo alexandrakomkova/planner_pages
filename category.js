@@ -31,7 +31,6 @@ function get_cat(id){
     });
 }
 function delete_cat(id) {
-
     delete_instance(cat_url+"/"+id);
     get_all_cats();
 }

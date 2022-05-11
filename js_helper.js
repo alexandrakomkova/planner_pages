@@ -58,9 +58,7 @@ function choose_table(data, result_block) {
 function draw_row_cat(rowData, result_block) {
     var row = $("<tr />")
     $(result_block).append(row);
-    //row.append($("<td>" + rowData.title + "</td>"));
-    //row.append($("<input type=\"text\" id='cat_select_" + rowData.id + "' maxlength=\"100\"/" + rowData.title + ">"));
-    row.append($("<td ><input id='cat_title_"+rowData.category_id+"' value='" + rowData.title + "' type='text' maxlength='100'></td>"));
+    row.append($("<td ><input id='cat_title_"+rowData.category_id+"' value='" + rowData.title + "' type='text' maxlength='100' required></td>"));
     row.append($("<button id='delete_cat' onClick='delete_cat("+rowData.id+");'>delete</button>"));
     row.append($("<button id='update_cat' onClick='update_cat("+rowData.id+");'>update</button>"));
 
@@ -70,11 +68,11 @@ function draw_row_task(rowData, result_block) {
 
     var row = $("<tr />")
     $(result_block).append(row);
-    //row.append($("<td><select type=\"text\" selected value=\"" + get_cat(rowData.category_id) + "\"></select></td>"));
-    row.append($("<td><select type='text' id='cat_select_"+rowData.category_id+"' >"+get_cat(rowData.category_id)+"</select></td>"));
-    row.append($("<td>" + format_date(rowData.time_start)+ "</td>"));
-    row.append($("<td>" + format_date(rowData.time_finish) + "</td>"));
+    row.append($("<td><select type='text' id='cat_select_"+rowData.category_id+"' required>"+get_cat(rowData.category_id)+"</select></td>"));
+    row.append($("<td><input type='time' id='time_start_"+rowData.id+"' value='" + format_date(rowData.time_start)+ "' min ='00:00' max='23:59' required></td>"));
+    row.append($("<td><input type='time' id='time_finish_"+rowData.id+"' value='" + format_date(rowData.time_finish) + "' min ='00:00' max='23:59' required></td>"));
     row.append($("<button id='delete_task' onClick='delete_task("+rowData.id+");'>delete</button>"));
+    row.append($("<button id='update_task' onClick='update_task("+rowData.id+");'>update</button>"));
 }
 
 function format_date(myDate) {

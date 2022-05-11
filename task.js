@@ -44,3 +44,14 @@ function delete_task(id) {
     delete_instance(task_url+"/"+id);
     get_all_tasks();
 }
+
+function update_task(id) {
+    let json_task = {
+        "user_id" : getCookie("user_id").toString(),
+        "category_id": document.getElementById(`cat_title_${id}`).value.toString(),
+        "time_start": document.getElementById(`time_start_${id}`).value.toString(),
+        "time_finish": document.getElementById(`time_finish_${id}`).value.toString(),
+    }
+    put(task_url+"/"+id, json_task);
+    get_all_tasks();
+}
