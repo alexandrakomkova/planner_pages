@@ -33,15 +33,18 @@ function get_cat(id){
 function delete_cat(id) {
 
     delete_instance(cat_url+"/"+id);
+    get_all_cats();
 }
 
-// function update_cat(){
-//     let json_genre = {
-//         "genre": document.getElementById('genre_name').value.toString()
-//     }
-//     let genre_id = document.getElementById('genre_id').value.toString();
-//     put(form_instance_url(cat_url, genre_id),json_genre);
-// }
+
+function update_cat(id){
+    let json_cat = {
+        "user_id" : getCookie("user_id").toString(),
+        "title": document.getElementById(`cat_title_${id}`).value.toString()
+    }
+    put(cat_url+"/"+id, json_cat);
+    get_all_cats();
+}
 
 function set_name_in_header(){
     document.getElementById("hello_account").innerText+=getCookie("user_email").toString();

@@ -58,12 +58,11 @@ function choose_table(data, result_block) {
 function draw_row_cat(rowData, result_block) {
     var row = $("<tr />")
     $(result_block).append(row);
-    row.append($("<td>" + rowData.title + "</td>"));
+    //row.append($("<td>" + rowData.title + "</td>"));
+    //row.append($("<input type=\"text\" id='cat_select_" + rowData.id + "' maxlength=\"100\"/" + rowData.title + ">"));
+    row.append($("<td ><input id='cat_title_"+rowData.category_id+"' value='" + rowData.title + "' type='text' maxlength='100'></td>"));
     row.append($("<button id='delete_cat' onClick='delete_cat("+rowData.id+");'>delete</button>"));
-    //row.append($("<button id='delete_cat' onClick='delete_cat();'>delete</button>"));
-    //row.append($("<button id='delete_cat' onClick='delete_cat();'>delete</button>"));
-
-    //row.append($("<td>" + rowData.id + "</td>"));
+    row.append($("<button id='update_cat' onClick='update_cat("+rowData.id+");'>update</button>"));
 
 }
 
