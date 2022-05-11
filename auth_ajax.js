@@ -40,13 +40,12 @@ function post_auth(url, json_data) {
                 setCookie('user_id', response['user']['id'], 1)
                 setCookie('user_email', response['user']['email'], 1)
                 window.location.href = "root.html";
-                // if(getCookie('user_id') === null) {
-                //
-                //     window.location.href = "index.html";
-                // }else{
-                //     window.location.href = "root.html";
-                //
-                // }
+                if(getCookie('user_id') === null) {
+                    window.location.href = "index.html";
+                }else{
+                    window.location.href = "root.html";
+
+                }
             }
         }
     });
