@@ -6,9 +6,6 @@ function add_script(src) {
     document.body.appendChild(script);
 }
 
-add_script('category.js');
-add_script('task.js');
-
 
 
 function error_alert(error){
@@ -62,10 +59,11 @@ function draw_row_cat(rowData, result_block) {
     var row = $("<tr />")
     $(result_block).append(row);
     row.append($("<td>" + rowData.title + "</td>"));
-    row.append($("<button id='delete_cat' onClick='delete_cat();'>delete</button>"));
+    row.append($("<button id='delete_cat' onClick='delete_cat("+rowData.id+");'>delete</button>"));
+    //row.append($("<button id='delete_cat' onClick='delete_cat();'>delete</button>"));
     //row.append($("<button id='delete_cat' onClick='delete_cat();'>delete</button>"));
 
-    row.append($("<td>" + rowData.id + "</td>"));
+    //row.append($("<td>" + rowData.id + "</td>"));
 
 }
 
@@ -129,3 +127,6 @@ function clean_cookie() {
     setCookie('user_id', getCookie('user_id').toString(), -1)
     setCookie('user_email',  getCookie('user_email').toString(), -1)
 }
+
+add_script('category.js');
+add_script('task.js');

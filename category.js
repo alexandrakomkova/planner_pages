@@ -31,9 +31,8 @@ function get_cat(id){
     });
 }
 function delete_cat() {
-    alert($(this).id);
-    // let genre_id = document.getElementById('genre_id').value.toString();
-    // delete_instance(cat_url+"/"+id);
+
+    delete_instance(cat_url+"/"+id);
 }
 
 // function update_cat(){
