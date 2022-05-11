@@ -75,6 +75,7 @@ function draw_row_task(rowData, result_block) {
     row.append($("<td><select type='text' id='cat_select_"+rowData.category_id+"' >"+get_cat(rowData.category_id)+"</select></td>"));
     row.append($("<td>" + format_date(rowData.time_start)+ "</td>"));
     row.append($("<td>" + format_date(rowData.time_finish) + "</td>"));
+    row.append($("<button id='delete_task' onClick='delete_task("+rowData.id+");'>delete</button>"));
 }
 
 function format_date(myDate) {

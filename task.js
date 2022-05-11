@@ -38,3 +38,8 @@ function add_values_to_select(select_id){
     });
 
 }
+
+function delete_task(id) {
+
+    delete_instance(task_url+"/"+id);
+}
