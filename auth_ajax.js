@@ -1,4 +1,4 @@
-domain = "http://dayplanner-3.herokuapp.com"
+domain = "https://dayplanner-3.herokuapp.com"
 function login(){
     let json_user = {
          "user": {
