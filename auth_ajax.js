@@ -1,3 +1,4 @@
+domain = "http://dayplanner-3.herokuapp.com"
 function login(){
     let json_user = {
          "user": {
@@ -6,9 +7,10 @@ function login(){
          }
     }
 
-    post_auth("http://localhost:3000/sessions#logged_in", json_user);
+    post_auth(domain+"/sessions#logged_in", json_user);
 }
 
+domain = "http://dayplanner-3.herokuapp.com"
 function registration(){
     let json_user = {
         "user": {
@@ -18,7 +20,7 @@ function registration(){
         }
     }
 
-    post_auth("http://localhost:3000/registrations", json_user);
+    post_auth(domain+"/registrations", json_user);
 }
 
 function post_auth(url, json_data) {

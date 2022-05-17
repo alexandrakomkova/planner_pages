@@ -1,4 +1,5 @@
-cat_url = "http://localhost:3000/categories"
+domain = "http://dayplanner-3.herokuapp.com"
+cat_url = domain+"/categories"
 get_all_cats();
 function add_cat(){
     let json_cat = {
