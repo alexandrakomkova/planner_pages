@@ -1,4 +1,4 @@
-domain = "http://dayplanner-3.herokuapp.com"
+domain = "https://dayplanner-3.herokuapp.com"
 task_url = domain+"/tasks"
 cat_url = domain+"/categories"
 add_values_to_select('task_cat');

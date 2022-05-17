@@ -10,7 +10,6 @@ function login(){
     post_auth(domain+"/sessions#logged_in", json_user);
 }
 
-domain = "http://dayplanner-3.herokuapp.com"
 function registration(){
     let json_user = {
         "user": {
